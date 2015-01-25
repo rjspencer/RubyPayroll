@@ -1,5 +1,8 @@
 > **Note**: This is intend as a learning tool for myself. This may or may not make legally accurate paychecks or tax forms. It may make bowling scoresheets. I make no claims as to the usability of this code and I take no responsibility for your tax or legal problems. 
 
+### View the Trello board 
+https://trello.com/b/dZe0OnH8/rubypayroll
+
 ### Purpose
 Ruby Payroll:
 
@@ -12,7 +15,7 @@ Ruby Payroll:
 1.  `bundle install`
 2.  `shotgun config.ru`
 
-As needed, create models & migrations with the `rake` tasks:
+As needed, create additional models & migrations with the `rake` tasks:
 
 ```
 rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
