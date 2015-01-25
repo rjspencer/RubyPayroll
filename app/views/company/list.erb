@@ -1,0 +1,10 @@
+<div class="container">
+  <h3 class="list-title">Company List</h3>
+  <% @companies.each do |company| %>
+    <div class="list-row"><a href="/company/<%= company.id %>"><%= company.name %></a></div>
+  <% end %>
+  <div class="text-right">
+    <span onclick="javascript:$(this).children().toggleClass('hidden')">Create New Company</span>
+    <%= erb :'company/_form', locals: { company: @company } %>
+  </div>
+</div>

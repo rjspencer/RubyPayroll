@@ -1,0 +1,10 @@
+<form action="/company/<%= @company.id ? @company.id : 'new' %>" method="POST">
+  NAME: <input type="text" name="company[name]" value="<%= @company.name %>"/><br>
+  STREET:
+  <input type="text" name="address[street_1]" value="<%= @company.address.street_1 %>" /><br>
+  <input type="text" name="address[street_2]" value="<%= @company.address.street_2 %>" /><br>
+  CITY: <input type="text" name="address[city]" value="<%= @company.address.city %>" /><br>
+  STATE: <input type="text" name="address[state]" value="<%= @company.address.state %>" /><br>
+  ZIP: <input type="text" name="address[zip]" value="<%= @company.address.zip %>" /><br>
+  <input type="submit" value="<%= @company.id ? 'Update' : 'Create' %> Company" />
+</form>
