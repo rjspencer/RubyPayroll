@@ -1,3 +1,4 @@
+# LIST ALL
 get '/company' do
   @companies = Company.all
   @company = Company.new
@@ -5,6 +6,7 @@ get '/company' do
   erb :"company/list"
 end
 
+# CREATE
 post '/company/new' do
   @company = Company.create(params[:company])
   @address = Address.create(params[:address])
@@ -12,11 +14,13 @@ post '/company/new' do
   redirect '/company'
 end
 
+# EDIT
 get '/company/:id' do
   @company = Company.find(params[:id])
   erb :"company/edit"
 end
 
+# UPDATE
 post '/company/:id' do
   @company = Company.find(params[:id])
   @company.update(params[:company])
@@ -24,8 +28,9 @@ post '/company/:id' do
   redirect '/company'
 end
 
+# DESTROY
 post '/company/delete/:id' do
   @company = Company.find(params[:id])
   @company.destroy
-  redirect '/user'
+  redirect '/company'
 end
