@@ -8,7 +8,9 @@ end
 
 # CREATE
 post '/employee/new' do
-  @employee = Employee.create(params[:employee])
+  @employee = Employee.new
+  @employee.name(params[:employee][:name])
+  @employee.save
   @address = Address.create(params[:address])
   @employee.address = @address
   redirect '/employee'
