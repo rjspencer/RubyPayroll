@@ -5,14 +5,14 @@ class Employee < ActiveRecord::Base
   validates :first_name, presence: true
   validates :last_name, presence: true
   
-  def full_name
-    "#{self.first_name} #{last_name}"
+  def list_name
+    "#{last_name}, #{first_name}"
   end
   
-  def name name
-#     TODO: this makes no allowance for middle names, suffixes, etc
-    self.first_name = name.split.first.capitalize
-    self.last_name = name.split.last.capitalize
+  def name full_name
+    name_array = full_name.titleize.split
+    self.last_name = name_array.pop
+    self.first_name = name_array.join(" ")
   end
   
 end
