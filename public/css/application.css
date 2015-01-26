@@ -1,3 +1,12 @@
+/* 
+758E81
+67C494
+3F775A
+A2C4B2
+244433
+C4645E red
+*/
+
 html {
   
 }
@@ -70,6 +79,8 @@ input {
   border-radius: 5px;
   border: 1px solid #777;
   margin: 5px;
+  font-size: 1.4 rems;
+  line-height: 2.4 rems;
 }
 
 .hidden {
@@ -84,4 +95,39 @@ input {
   min-height: 400px;
   margin: 0 auto;
   box-shadow: 0px 0px 4px #333;
+}
+
+.button {
+  color: white;
+  background: #3F775A;
+  border: 1px solid #A2C4B2;
+  border-radius: 8px;
+  box-shadow: 1px 2px 0px #244433;
+  height: 40px;
+  font-weight: 500;
+  font-size: 28px;
+  margin: 10px auto;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+/* COLORS */
+
+.pale-green {
+  background: #758E81;
+}
+.bright-green {
+  background: #67C494;
+}
+.green {
+  background: #3F775A
+}
+.light-green {
+  background: #A2C4B2
+}
+.dark-green {
+  background: #244433
+}
+.red {
+  background: #C4645E
 }

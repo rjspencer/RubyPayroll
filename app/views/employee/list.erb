@@ -1,0 +1,11 @@
+<h3 class="list-title">Employee List</h3>
+<% @employees.each do |employee| %>
+<div class="list-row"><a href="/employee/<%= employee.id %>"><%= employee.list_name %></a></div>
+<% end %>
+<hr>
+<div class="text-right">
+  <div class="collapsible-header">Create New Employee</div>
+  <div class="collapsible-box hidden">
+    <%= erb :'employee/_form', locals: { employee: @employee } %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<form action="/employee/<%= @employee.id ? @employee.id : 'new' %>" method="POST">
+  <input type="text" name="employee[name]" placeholder="Full Name" value="<%= @employee.list_name %>"/><br>
+  <input type="text" name="address[street_1]" placeholder="Street" value="<%= @employee.address.street_1 %>" /><br>
+  <input type="text" name="address[street_2]" placeholder="Apt/Suite" value="<%= @employee.address.street_2 %>" /><br>
+  <input type="text" name="address[city]" placeholder="City" value="<%= @employee.address.city %>" /><br>
+  <input type="text" name="address[state]" placeholder="State" value="<%= @employee.address.state %>" /><br>
+  <input type="text" name="address[zip]" placeholder="Zip Code" value="<%= @employee.address.zip %>" /><br>
+  <input type="submit" value="<%= @employee.id ? 'Update' : 'Create' %> employee" />
+</form>

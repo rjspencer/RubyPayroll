@@ -1,10 +1,11 @@
 <% if session[:user_id].nil? %>
-<a href="/users/new" >Create New Account</a>
-<form action="/users/login" method="POST">
-  EMAIL: <input type="text" name="email" value="" /><br>
-  PASSWORD: <input type="text" name="password" value="" />
-  <input type="submit" value="Log In" />
-</form>
+  <a href="/users/new" >Create New Account</a>
+  <form action="/users/login" method="POST">
+    EMAIL: <input type="text" name="email" value="" /><br>
+    PASSWORD: <input type="text" name="password" value="" />
+    <input type="submit" value="Log In" />
+  </form>
 <% else %>
-<a href="/users/logout">LOG OUT</a>
+  <a href="/paycheck" ><div class="button green">Create Paychecks</div></a>
+  <a href="/employee" ><div class="button bright-green">Add Employees</div></a>
 <% end %>
