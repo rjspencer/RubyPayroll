@@ -19,13 +19,13 @@ li {
 }
 
 header {
-  background: #222;
+  background: #244433;
   color: white;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 60px;
+  height: 65px;
   box-shadow: 0px 0px 5px #444;
 }
 header h1 {
@@ -33,13 +33,13 @@ header h1 {
   position: relative;
   left: 50%;
   margin-left: -35%;
-  margin-top: 10px;
+  margin-top: -4px;
 }
 header a {
   color: white;
 }
 header a:hover {
-  text-shadow: 0px 0px 15px #ccf;
+  text-shadow: 0px 0px 18px #A2C4B2;
 }
 header ul {
   position: absolute;
@@ -67,7 +67,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Rock Salt', cursive;
+  font-weight: 500;
   color: #222;
 }
 
@@ -78,9 +79,9 @@ input {
   display: inline;
   border-radius: 5px;
   border: 1px solid #777;
-  margin: 5px;
-  font-size: 1.4 rems;
-  line-height: 2.4 rems;
+  margin: 10px;
+  padding: 8px 5px;
+  font-size: 16px;
 }
 
 .hidden {
@@ -109,6 +110,24 @@ input {
   margin: 10px auto;
   padding: 15px 10px;
   text-align: center;
+}
+
+.button-small {
+  color: white;
+  background: #3F775A;
+  border: 1px solid #A2C4B2;
+  border-radius: 8px;
+  box-shadow: 1px 2px 0px #244433;
+  min-height: 26px;
+  width: 140px;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+.button-small:hover {
+  border-width: 2px;
 }
 
 /* COLORS */

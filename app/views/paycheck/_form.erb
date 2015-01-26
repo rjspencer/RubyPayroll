@@ -1,0 +1,17 @@
+<form action="/paycheck/<%= @paycheck.id ? @paycheck.id : 'new' %>" method="POST">
+  <select name="employee">
+    <% @employees.each do |employee| %>
+    <option value="<%= employee.id %>" <%= employee === @paycheck.employee ? 'selected' : '' %> ><%= employee.list_name %></option>
+    <% end %>
+  </select><br>
+  <input type="date" name="paycheck[period_start]" value="<%= @paycheck.period_start ? @paycheck.period_start : Time.now %>"/> to 
+  <input type="date" name="paycheck[period_end]" value="<%= @paycheck.period_end ? @paycheck.period_end : Time.now %>"/><hr>
+  <input type="text" name="paycheck[regular_hours]" placeholder="Hours Worked" value="<%= @paycheck.regular_hours %>"/> @ 
+  <input type="text" name="paycheck[regular_rate]" placeholder="Pay Rate" value="<%= @paycheck.regular_rate %>"/><br>
+  <input type="text" name="paycheck[overtime_hours]" placeholder="Overtime Hours" value="<%= @paycheck.overtime_hours %>"/> @ 
+  <input type="text" name="paycheck[overtime_rate]" placeholder="Overtime Rate" value="<%= @paycheck.overtime_rate %>"/><br>
+  <input type="text" name="paycheck[special_hours]" placeholder="Special Hours" value="<%= @paycheck.special_hours %>"/> @ 
+  <input type="text" name="paycheck[special_rate]" placeholder="Special Rate" value="<%= @paycheck.special_rate %>"/><br>
+  <input type="text" name="paycheck[bonus]" placeholder="Bonus" value="<%= @paycheck.bonus %>"/><br>
+  <input class="button-small pale-green" type="submit" value="<%= @paycheck.id ? 'Update' : 'Create' %> Paycheck" />
+</form>

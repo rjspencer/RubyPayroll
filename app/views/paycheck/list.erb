@@ -1,0 +1,11 @@
+<h3 class="list-title">Paycheck List</h3>
+<% @paychecks.each do |paycheck| %>
+<div class="list-row"><a href="/paycheck/<%= paycheck.id %>"><%= paycheck.period_start %></a> <%= paycheck.employee.list_name %></div>
+<% end %>
+<hr>
+<div class="text-right">
+  <div class="collapsible-header button-small">Create New Paycheck</div>
+  <div class="collapsible-box hidden">
+    <%= erb :'paycheck/_form', locals: { paycheck: @paycheck } %>
+  </div>
+</div>
