@@ -1,7 +1,8 @@
 > **Note**: This is intend as a learning tool for myself. This may or may not make legally accurate paychecks or tax forms. It may make bowling scoresheets. I make no claims as to the usability of this code and I take no responsibility for your tax or legal problems. 
 
-### View the Trello board 
-https://trello.com/b/dZe0OnH8/rubypayroll
+### Links
+Demo - http://rubypayroll.herokuapp.com/
+Trello Board - https://trello.com/b/dZe0OnH8/rubypayroll
 
 ### Purpose
 Ruby Payroll:
