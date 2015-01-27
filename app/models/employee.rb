@@ -6,7 +6,13 @@ class Employee < ActiveRecord::Base
   validates :last_name, presence: true
   
   def list_name
-    "#{last_name}, #{first_name}"
+    if last_name && first_name
+      "#{last_name}, #{first_name}"
+    elsif first_name
+      first_name
+    elsif last_name
+      last_name
+    end
   end
   
   def name full_name
