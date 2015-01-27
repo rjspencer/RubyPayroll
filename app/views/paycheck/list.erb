@@ -1,7 +1,9 @@
 <h3 class="list-title">Paycheck List</h3>
-<% @paychecks.each do |paycheck| %>
-<div class="list-row"><a href="/paycheck/<%= paycheck.id %>"><%= paycheck.period_start %></a> <%= paycheck.employee.list_name %></div>
-<% end %>
+<ul class="list">
+  <% @paychecks.each do |paycheck| %>
+  <li class="list-row"><a href="/paycheck/<%= paycheck.id %>"><%= paycheck.period_start %></a> <%= paycheck.employee.list_name %></li>
+  <% end %>
+</ul>
 <hr>
 <div class="text-right">
   <div class="collapsible-header button-small"><b>+</b> New Paycheck</div>

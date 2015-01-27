@@ -6,16 +6,16 @@ A2C4B2
 244433
 C4645E red
 */
+
 * {
   transition: all .3s ease;
-}
-html {
-  
 }
 
 a {
   text-decoration: none;
+  color: #222;
 }
+
 li {
   list-style: none;
 }
@@ -40,7 +40,14 @@ header h1 {
 header a {
   color: white;
 }
+header a:link {
+  color: white;
+}
+header a:selected {
+  color: white;
+}
 header a:hover {
+  color: white;
   text-shadow: 0px 0px 18px #A2C4B2;
 }
 header ul {
@@ -74,9 +81,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #222;
 }
 
-form {
-  
+.list {
+  margin: 0 auto;
+  width: 90%;
 }
+.list li {
+  width: 80%;
+  padding: 10px;
+}
+.list li:nth-child(even) {
+  background: #A2C4B2;
+}
+.list a {
+  margin-right: 20px;
+}
+
 input, select {
   display: inline;
   border-radius: 5px;

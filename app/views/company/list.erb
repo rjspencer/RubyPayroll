@@ -1,7 +1,9 @@
 <h3 class="list-title">Company List</h3>
-<% @companies.each do |company| %>
-<div class="list-row"><a href="/company/<%= company.id %>"><%= company.name %></a></div>
-<% end %>
+<ul class="list">
+  <% @companies.each do |company| %>
+  <li class="list-row"><a href="/company/<%= company.id %>"><%= company.name %></a></li>
+  <% end %>
+</ul>
 <hr>
 <div class="text-right">
   <div class="collapsible-header button-small"><b>+</b> New Company</div>
