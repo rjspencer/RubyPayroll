@@ -1,9 +1,9 @@
 <form action="/company/<%= @company.id ? @company.id : 'new' %>" method="POST">
-  <input type="text" name="company[name]" placeholder="Name" value="<%= @company.name %>"/><br>
-  <input type="text" name="address[street_1]" placeholder="Street" value="<%= @company.address.street_1 %>" /><br>
+  <input type="text" name="company[name]" placeholder="Name" value="<%= @company.name %>"/>
+  <input type="submit" value="<%= @company.id ? 'Update' : 'Create' %> Company" /><br>
+  <input type="text" name="address[street_1]" placeholder="Street" value="<%= @company.address.street_1 %>" />
   <input type="text" name="address[street_2]" placeholder="Apt/Suite" value="<%= @company.address.street_2 %>" /><br>
-  <input type="text" name="address[city]" placeholder="City" value="<%= @company.address.city %>" /><br>
+  <input type="text" name="address[city]" placeholder="City" value="<%= @company.address.city %>" />
   <input type="text" name="address[state]" placeholder="State" value="<%= @company.address.state %>" /><br>
-  <input type="text" name="address[zip]" placeholder="Zip Code" value="<%= @company.address.zip %>" /><br>
-  <input type="submit" value="<%= @company.id ? 'Update' : 'Create' %> Company" />
+  <input type="text" name="address[zip]" placeholder="Zip Code" value="<%= @company.address.zip %>" />
 </form>
